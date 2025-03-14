@@ -1,0 +1,17 @@
+---
+import Card from "../components/Card.astro";
+const { title } = Astro.props;
+---
+
+<h2>{title}</h2>
+<div class="wrapper">
+  <slot />
+</div>
+
+<style>
+  .wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+</style>
